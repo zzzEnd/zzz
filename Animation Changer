@@ -1,0 +1,28 @@
+---Made By zzz
+local Player = game.Players.LocalPlayer
+ 
+Player.Chatted:connect(function(cht)
+	if cht:match(":animation .") then
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/PewPewBoy/Animation-Changer-and-Korblox-UI/main/Animation%20Changer", true))() 
+wait(13)
+
+game:GetService("UserInputService").InputBegan:connect(function(key)
+if key.KeyCode == Enum.KeyCode.e then --Replace E with the key you would like to be pressed
+local Player = TextBox.Text
+local plr1 = game.Players.LocalPlayer.Character
+local plr2 = game.Workspace:FindFirstChild(Player)
+while true do
+plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=182724289"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=182724289"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=182724289"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=182724289"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=891627522"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=891609353"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=891609353"
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end
+end
+end)
+	end
+end)
